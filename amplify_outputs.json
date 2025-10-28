@@ -1,0 +1,84 @@
+{
+  "auth": {
+    "user_pool_id": "us-west-2_WRNpaoQ6Y",
+    "aws_region": "us-west-2",
+    "user_pool_client_id": "21r3ht1auhr3sf64tknpjdso76",
+    "identity_pool_id": "us-west-2:6eb59860-68ba-4f7c-a5dd-f6a074602892",
+    "mfa_methods": [],
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "groups": [],
+    "mfa_configuration": "NONE",
+    "password_policy": {
+      "min_length": 8,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_uppercase": true
+    },
+    "unauthenticated_identities_enabled": true
+  },
+  "data": {
+    "url": "https://ior7cthezfdpdeha6os663ygk4.appsync-api.us-west-2.amazonaws.com/graphql",
+    "aws_region": "us-west-2",
+    "api_key": "da2-idlj6hiqobewbhvjwumjhvt5lu",
+    "default_authorization_type": "API_KEY",
+    "authorization_types": [
+      "AMAZON_COGNITO_USER_POOLS",
+      "AWS_IAM"
+    ],
+    "model_introspection": {
+      "version": 1,
+      "models": {},
+      "enums": {},
+      "nonModels": {
+        "BedrockResponse": {
+          "name": "BedrockResponse",
+          "fields": {
+            "body": {
+              "name": "body",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "error": {
+              "name": "error",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            }
+          }
+        }
+      },
+      "queries": {
+        "askBedrock": {
+          "name": "askBedrock",
+          "isArray": false,
+          "type": {
+            "nonModel": "BedrockResponse"
+          },
+          "isRequired": false,
+          "arguments": {
+            "ingredients": {
+              "name": "ingredients",
+              "isArray": true,
+              "type": "String",
+              "isRequired": false,
+              "isArrayNullable": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "version": "1.4"
+}
